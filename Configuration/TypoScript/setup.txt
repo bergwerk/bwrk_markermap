@@ -1,0 +1,15 @@
+plugin.tx_bwrkmarkermap {
+    persistence {
+        storagePid = {$plugin.tx_bwrkmarkermap.settings.storagePid}
+    }
+    settings {
+        storagePid = {$plugin.tx_bwrkmarkermap.settings.storagePid}
+        backend {
+            latitude = {$plugin.tx_bwrkmarkermap.settings.backend.latitude}
+            longitude = {$plugin.tx_bwrkmarkermap.settings.backend.longitude}
+        }
+    }
+}
+
+module.tx_bwrkmarkermap.persistence.storagePid < plugin.tx_bwrkmarkermap.persistence.storagePid
+module.tx_bwrkmarkermap.settings < plugin.tx_bwrkmarkermap.settings

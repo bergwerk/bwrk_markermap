@@ -22,13 +22,13 @@ $tca->addTextField('info_window', true);
 $tca->addInputField('lat');
 $tca->addInputField('lng');
 
-//$tca->addUserFunc('map', 'BERGWERK\BwrkMarkermap\Utility\Map->render', array(
-//    'lat' => 'lat',
-//    'lng' => 'lng',
-//    'zip' => 'zip',
-//    'city' => 'city',
-//    'address' => 'address',
-//    'country_code' => 'country_code'
-//));
+$tca->addUserFunc('map', 'BERGWERK\BwrkMarkermap\UserFunc\Map->render', array(
+    'lat' => 'lat',
+    'lng' => 'lng',
+    'zip' => 'zip',
+    'city' => 'city',
+    'address' => 'address',
+    'country_code' => 'country_code'
+));
 
 return $tca->createTca();

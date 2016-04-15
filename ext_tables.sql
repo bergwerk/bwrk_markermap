@@ -11,8 +11,8 @@ CREATE TABLE tx_bwrkmarkermap_domain_model_marker (
 	country_code varchar(255) DEFAULT '0' NOT NULL,
 	city int(11) DEFAULT '0' NOT NULL,
 	info_window text,
-	lat int(11) DEFAULT '0' NOT NULL,
-	lng int(11) DEFAULT '0' NOT NULL,
+	lat varchar(255) DEFAULT '0' NOT NULL,
+	lng varchar(255) DEFAULT '0' NOT NULL,
 
 	t3ver_oid int(11) DEFAULT '0' NOT NULL,
 	t3ver_id int(11) DEFAULT '0' NOT NULL,
