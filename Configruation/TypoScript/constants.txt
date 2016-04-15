@@ -1,0 +1,5 @@
+plugin.tx_bwrkmarkermap {
+    settings {
+        storagePid = 0
+    }
+}

@@ -1,0 +1,10 @@
+plugin.tx_bwrkmarkermap {
+    persistence {
+        storagePid = {$plugin.tx_bwrkmarkermap.settings.storagePid}
+    }
+    settings {
+        storagePid = {$plugin.tx_bwrkmarkermap.settings.storagePid}
+    }
+}
+
+module.tx_bwrkmarkermap.persistence.storagePid < plugin.tx_bwrkmarkermap.persistence.storagePid

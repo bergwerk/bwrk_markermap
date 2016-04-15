@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file target-language="de" datatype="plaintext" original="messages" date="2016-04-14T16:55:00Z" product-name="bwrk_markermap">
+        <header/>
+        <body>
+            <trans-unit id="tx_bwrkmarkermap_domain_model_marker" xml:space="preserve">
+                <target>Marker Map</target>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.hidden" xml:space="preserve">
+                <target>verbergen</target>
+            </trans-unit>
+            <trans-unit id="tx_bwrkmarkermap_domain_model_marker.title" xml:space="preserve">
+                <target>Titel</target>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.address" xml:space="preserve">
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.zip" xml:space="preserve">
+				<target>Postleitzahl</target>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.country_code" xml:space="preserve">
+				<target>Ländercode</target>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.info_window" xml:space="preserve">
+				<target>Info Popup</target>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.lat" xml:space="preserve">
+				<target>Latitude</target>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.lng" xml:space="preserve">
+				<target>Longitude</target>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.map" xml:space="preserve">
+				<target>Karte</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
