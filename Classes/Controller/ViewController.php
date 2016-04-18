@@ -15,6 +15,40 @@ class ViewController extends ActionController
 
     public function indexAction()
     {
-        DebuggerUtility::var_dump($this->markerRepository->findByUid(1));
+        $cObj = $this->configurationManager->getContentObject()->data;
+        $this->view->assignMultiple(array(
+            'markers' => $this->buildMarkerJs($this->markerRepository->findAll(), $cObj),
+            'cObj' => $cObj
+        ));
+    }
+
+    /**
+     * @param Marker[] $markers
+     * @return string
+     */
+    private function buildMarkerJs($markers, $cObj)
+    {
+        $js = '';
+        $js.= 'var bwrkMarkerMapMarkers_'.$cObj['uid'].' = [];';
+        /** @var Marker $marker */
+        $i=0;
+        foreach($markers as $marker)
+        {
+            $js.= '
+            bwrkMarkerMapMarkers_'.$cObj['uid'].'['.$i.'] = {
+                title: "'.$marker->getTitle().'",
+                position: {lat: '.$marker->getLat().', lng: '.$marker->getLng().'},
+                icon: {
+                    path: "'.$marker->getStyle()->getSvgPath().'",
+                    fillColor: "'.$marker->getStyle()->getFillColor().'",
+                    fillOpacity: '.$marker->getStyle()->getFillOpacity().',
+                    scale: '.$marker->getStyle()->getScale().',
+                    strokeWeight: 0,
+                    anchor: new google.maps.Point('.$marker->getStyle()->getAnchor().')
+                }
+            };';
+            $i++;
+        }
+        return $js;
     }
 }

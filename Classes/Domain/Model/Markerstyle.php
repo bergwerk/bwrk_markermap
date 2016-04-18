@@ -1,10 +1,10 @@
 <?php
 
-namespace BERGWERK\BwrkMarkermap\Domain\Model\Marker;
+namespace BERGWERK\BwrkMarkermap\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
-class Style extends AbstractEntity
+class MarkerStyle extends AbstractEntity
 {
     /**
      * @var string
@@ -78,7 +78,4 @@ class Style extends AbstractEntity
     {
         return $this->svgPath;
     }
-
-
-
 }

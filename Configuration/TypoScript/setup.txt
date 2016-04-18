@@ -13,3 +13,10 @@ plugin.tx_bwrkmarkermap {
 
 module.tx_bwrkmarkermap.persistence.storagePid < plugin.tx_bwrkmarkermap.persistence.storagePid
 module.tx_bwrkmarkermap.settings < plugin.tx_bwrkmarkermap.settings
+
+
+
+page = PAGE
+page.includeJSFooterlibs.98_bwrkMarkerMap = https://maps.googleapis.com/maps/api/js?sensor=false
+page.includeJSFooterlibs.98_bwrkMarkerMap.external = 1
+page.includeJSFooterlibs.99_bwrkMarkerMap = EXT:bwrk_markermap/Resources/Public/Js/app.js

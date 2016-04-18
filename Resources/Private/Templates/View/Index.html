@@ -1,1 +1,16 @@
-template
+<div class="tx-bwrk-markermap">
+    <div id="tx-bwrk-markermap__{cObj.uid}" class="tx-bwrk-markermap__map" style="width:100%;height:500px;"></div>
+</div>
+<script type="text/javascript">
+    window.onload = function()
+    {
+        <f:format.raw>{markers}</f:format.raw>
+        var bwrkMarkerMap_{cObj.uid} = BwrkMarkerMap;
+            bwrkMarkerMap_{cObj.uid}.map.id = 'tx-bwrk-markermap__{cObj.uid}';
+            bwrkMarkerMap_{cObj.uid}.map.options.center.lat = {settings.map_center_lat};
+            bwrkMarkerMap_{cObj.uid}.map.options.center.lng = {settings.map_center_lng};
+            bwrkMarkerMap_{cObj.uid}.map.options.zoom = {settings.map_zoom};
+            bwrkMarkerMap_{cObj.uid}.markers = bwrkMarkerMapMarkers_{cObj.uid};
+            bwrkMarkerMap_{cObj.uid}.init();
+    }
+</script>

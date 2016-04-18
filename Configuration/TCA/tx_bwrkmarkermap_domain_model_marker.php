@@ -11,11 +11,13 @@ $tca->init($configuration);
 
 $tca->addCheckField('hidden');
 
+$tca->addSingleRelationField('style', 'tx_bwrkmarkermap_domain_model_marker_style');
+
 $tca->addInputField('title');
 $tca->addInputField('address');
 $tca->addInputField('zip');
-$tca->addInputField('country_code');
 $tca->addInputField('city');
+$tca->addInputField('country_code');
 
 $tca->addTextField('info_window', true);
 
