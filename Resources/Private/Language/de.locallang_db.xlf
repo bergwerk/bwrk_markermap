@@ -61,6 +61,16 @@
 			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.svg_path" xml:space="preserve">
                 <target>SVG Code</target>
             </trans-unit>
+
+			<trans-unit id="flexform.Pi1.map_center_lat" xml:space="preserve">
+                <target>Center Latitude</target>
+            </trans-unit>
+			<trans-unit id="flexform.Pi1.map_center_lng" xml:space="preserve">
+                <target>Center Longitude</target>
+            </trans-unit>
+			<trans-unit id="flexform.Pi1.map_zoom" xml:space="preserve">
+                <target>Zoom</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
