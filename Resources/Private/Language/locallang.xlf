@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-14T16:55:00Z" product-name="bwrk_markermap">
+		<header/>
+		<body>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker" xml:space="preserve">
+                <source>Marker</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.hidden" xml:space="preserve">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="tx_bwrkmarkermap_domain_model_marker.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.address" xml:space="preserve">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.zip" xml:space="preserve">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.city" xml:space="preserve">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.country_code" xml:space="preserve">
+				<source>Country Code</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.info_window" xml:space="preserve">
+				<source>Info Popup</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.lat" xml:space="preserve">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.lng" xml:space="preserve">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker.map" xml:space="preserve">
+				<source>Map</source>
+			</trans-unit>
+
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style" xml:space="preserve">
+                <source>Style</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.title" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.hidden" xml:space="preserve">
+                <source>Hidden</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.fill_color" xml:space="preserve">
+                <source>Fill Color (HEX-Code)</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.fill_opacity" xml:space="preserve">
+                <source>Fill Opacity (0.0 - 1.0)</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.scale" xml:space="preserve">
+                <source>Scale (0.0 - 1.0)</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.anchor" xml:space="preserve">
+                <source>Anchor (10, 10)</source>
+            </trans-unit>
+			<trans-unit id="tx_bwrkmarkermap_domain_model_marker_style.svg_path" xml:space="preserve">
+                <source>SVG Code</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>
