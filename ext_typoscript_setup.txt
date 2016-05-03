@@ -1,0 +1,11 @@
+config.tx_extbase {
+    persistence {
+        classes {
+            BERGWERK\BwrkMarkermap\Domain\Model\Address {
+                mapping {
+                    tableName = tx_bwrkaddress_domain_model_address
+                }
+            }
+        }
+    }
+}

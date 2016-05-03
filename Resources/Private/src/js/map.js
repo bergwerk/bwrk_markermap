@@ -57,7 +57,7 @@ var BwrkMarkerMap = {
             }, {
                 "featureType": "administrative",
                 "elementType": "labels.text.fill",
-                "stylers": [{"visibility": "on"},{"color": "#737373"}]
+                "stylers": [{"visibility": "on"}, {"color": "#737373"}]
             }, {
                 "featureType": "poi",
                 "elementType": "labels.icon",
@@ -88,14 +88,28 @@ var BwrkMarkerMap = {
         this.map.googleElement = new google.maps.Map(mapDiv, this.map.options);
 
         var that = this;
-        this.markers.forEach(function(element, index)
-        {
-            new google.maps.Marker({
-                position:element.position,
+        this.markers.forEach(function (element, index) {
+            var tmpMarker = new google.maps.Marker({
+                position: element.position,
                 map: that.map.googleElement,
                 title: element.title,
                 icon: element.icon,
+                marker_id: element.uid
+            });
+            tmpMarker.addListener('click', function () {
+                $.ajax({
+                    method: "GET",
+                    url: "index.php",
+                    data: {
+                        'eID': 'bwrkMarkerWindow',
+                        'tx_bwrkmarkermap_pi2[uid]': tmpMarker.marker_id
+                    }
+                }).done(function (content) {
+                    new google.maps.InfoWindow({
+                        content: content
+                    }).open(that.map.googleElement, tmpMarker);
+                });
             });
         });
-    },
+    }
 };

@@ -80,3 +80,7 @@ CREATE TABLE tx_bwrkmarkermap_domain_model_markerstyle (
 	KEY parent (pid),
 	KEY sys_language_uid_l10n_parent (sys_language_uid,l10n_parent)
 );
+
+CREATE TABLE tx_bwrkaddress_domain_model_address (
+	style int(11) DEFAULT '0' NOT NULL,
+);

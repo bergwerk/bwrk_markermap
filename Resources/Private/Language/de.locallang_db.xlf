@@ -71,6 +71,9 @@
 			<trans-unit id="flexform.Pi1.map_zoom" xml:space="preserve">
                 <target>Zoom</target>
             </trans-unit>
+			<trans-unit id="flexform.Pi1.bwrk_address" xml:space="preserve">
+                <target>Adressen von bwrk_address nutzen?</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

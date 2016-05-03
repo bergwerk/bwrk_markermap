@@ -17,6 +17,7 @@ class Pi1 extends FlexForm {
     public function render()
     {
         $this->addSheet('general', array(
+            $this->addCheckField('bwrk_address'),
             $this->addInputField('map_center_lat'),
             $this->addInputField('map_center_lng'),
             $this->addInputField('map_zoom')

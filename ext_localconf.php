@@ -13,3 +13,18 @@ if (!defined('TYPO3_MODE')) {
         'View' => 'index'
     )
 );
+
+TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'BERGWERK.' . $_EXTKEY,
+    'Pi2',
+    array(
+        'MarkerWindow' => 'get'
+    ),
+    array(
+        'MarkerWindow' => 'get'
+    )
+);
+
+
+
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['bwrkMarkerWindow'] = 'EXT:'.$_EXTKEY.'/Classes/Utility/Eid/MarkerWindow.php';

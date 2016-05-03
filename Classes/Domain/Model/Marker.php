@@ -201,5 +201,13 @@ class Marker extends AbstractEntity
         return $this->style->toArray()[0];
     }
 
+    public function setStyle($style)
+    {
+        $this->style = $style;
+    }
 
+    public function setUid($uid)
+    {
+        $this->uid = $uid;
+    }
 }

@@ -11,7 +11,7 @@ $tca->init($configuration);
 
 $tca->addCheckField('hidden');
 
-$tca->addSingleRelationField('style', 'tx_bwrkmarkermap_domain_model_marker_style');
+$tca->addSingleRelationField('style', 'tx_bwrkmarkermap_domain_model_markerstyle');
 
 $tca->addInputField('title');
 $tca->addInputField('address');
