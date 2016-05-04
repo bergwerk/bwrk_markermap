@@ -94,7 +94,7 @@ var BwrkMarkerMap = {
 
         this.geoCoder = new google.maps.Geocoder();
         this.distanceMatrix = new google.maps.DistanceMatrixService();
-        this.searchBox = $('#' + this.map.id).parent('.tx-bwrk-markermap').children('.tx-bwrk-markermap__searchbox');
+        this.searchBox = $('#' + this.map.id).parent('.tx-bwrk-markermap').find('.tx-bwrk-markermap__searchbox');
 
         var that = this;
         this.markers.forEach(function (element, index) {
@@ -121,7 +121,7 @@ var BwrkMarkerMap = {
             });
         });
 
-        this.searchBox.children('form').submit(function () {
+        this.searchBox.find('form').submit(function () {
             var inputValue = $(this).find('input[name="tx-bwrk-markermap__searchbox-input"]').val();
             that.codeAddress(inputValue);
             return false;
