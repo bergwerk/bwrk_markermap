@@ -41,7 +41,7 @@ CREATE TABLE tx_bwrkmarkermap_domain_model_marker (
 	KEY sys_language_uid_l10n_parent (sys_language_uid,l10n_parent)
 );
 
-CREATE TABLE tx_bwrkmarkermap_domain_model_markerstyle (
+CREATE TABLE tx_bwrkmarkermap_domain_model_marker_style (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	tstamp int(11) DEFAULT '0' NOT NULL,

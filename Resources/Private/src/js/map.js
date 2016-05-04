@@ -86,6 +86,7 @@ var BwrkMarkerMap = {
     distanceMatrix: null,
     geoCodeMarkers: [],
     searchBox: null,
+    customMarkerIcon: null,
     markers: null,
     init: function () {
         var mapDiv = document.getElementById(this.map.id);
@@ -144,7 +145,8 @@ var BwrkMarkerMap = {
                     });
                     var locationMarker = new google.maps.Marker({
                         map: that.map.googleElement,
-                        position: result.geometry.location
+                        position: result.geometry.location,
+                        icon: that.customMarkerIcon
                     });
                     that.geoCodeMarkers.push(locationMarker);
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace BERGWERK\BwrkMarkermap\Domain\Model;
+namespace BERGWERK\BwrkMarkermap\Domain\Model\Marker;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
-class MarkerStyle extends AbstractEntity
+class Style extends AbstractEntity
 {
     /**
      * @var string

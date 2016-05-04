@@ -7,7 +7,7 @@ $temporaryColumn = array(
         'label' => 'LLL:EXT:bwrk_markermap/Resources/Private/Language/locallang_db.xlf:tx_bwrkmarkermap_domain_model_marker_style',
         'config' => array (
             'type' => 'select',
-            'foreign_table' => 'tx_bwrkmarkermap_domain_model_markerstyle',
+            'foreign_table' => 'tx_bwrkmarkermap_domain_model_marker_style',
             'size' => 1,
             'maxitems' => 1
         )

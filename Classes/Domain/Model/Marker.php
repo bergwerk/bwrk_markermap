@@ -45,7 +45,7 @@ class Marker extends AbstractEntity
     protected $lng;
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BERGWERK\BwrkMarkermap\Domain\Model\MarkerStyle>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BERGWERK\BwrkMarkermap\Domain\Model\Marker\Style>
      */
     protected $style;
 
@@ -194,7 +194,7 @@ class Marker extends AbstractEntity
     }
 
     /**
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BERGWERK\BwrkMarkermap\Domain\Model\MarkerStyle>
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\BERGWERK\BwrkMarkermap\Domain\Model\Marker\Style>
      */
     public function getStyle()
     {

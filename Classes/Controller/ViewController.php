@@ -2,10 +2,10 @@
 
 namespace BERGWERK\BwrkMarkermap\Controller;
 
+use BERGWERK\BwrkMarkermap\Domain\Model\Marker;
 use BERGWERK\BwrkMarkermap\Helpers\BwrkAddress;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class ViewController extends ActionController
 {
