@@ -82,10 +82,17 @@ var BwrkMarkerMap = {
         },
         googleElement: null
     },
+    geoCoder: null,
+    distanceMatrix: null,
+    searchBox: null,
     markers: null,
     init: function () {
         var mapDiv = document.getElementById(this.map.id);
         this.map.googleElement = new google.maps.Map(mapDiv, this.map.options);
+
+        this.geoCoder = new google.maps.Geocoder();
+        this.distanceMatrix = new google.maps.DistanceMatrixService();
+        this.searchBox = $('#' + this.map.id).parent('.tx-bwrk-markermap').children('.tx-bwrk-markermap__searchbox');
 
         var that = this;
         this.markers.forEach(function (element, index) {
@@ -111,5 +118,71 @@ var BwrkMarkerMap = {
                 });
             });
         });
+
+        this.searchBox.children('form').submit(function () {
+            var inputValue = $(this).find('input[name="tx-bwrk-markermap__searchbox-input"]').val();
+            that.codeAddress(inputValue);
+            return false;
+        });
+
+    },
+    codeAddress: function (address) {
+        var that = this;
+        this.geoCoder.geocode({
+            'address': address
+        },
+        function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var result = results[0];
+                var nearestMarkerObject = that.measureDistance(result.geometry.location);
+                var nearestMarker = new google.maps.Marker({
+                    position: nearestMarkerObject.position
+                });
+                var locationMarker = new google.maps.Marker({
+                    map: that.map.googleElement,
+                    position: result.geometry.location
+                });
+                var markers = [];
+                    markers[0] = locationMarker;
+                    markers[1] = nearestMarker;
+                that.fitBounds(markers);
+            }
+        });
+    },
+    measureDistance: function(origin)
+    {
+        var lat = origin.lat();
+        var lng = origin.lng();
+        var R = 6371; // radius of earth in km
+        var distances = [];
+        var closest = -1;
+        var that = this;
+
+        for( i=0;i < this.markers.length; i++ ) {
+            var mlat = that.markers[i].position.lat;
+            var mlng = that.markers[i].position.lng;
+            var dLat  = that.rad(mlat - lat);
+            var dLong = that.rad(mlng - lng);
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(that.rad(lat)) * Math.cos(that.rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var d = R * c;
+            distances[i] = d;
+            if ( closest == -1 || d < distances[closest] ) {
+                closest = i;
+            }
+        }
+        return this.markers[closest];
+    },
+    rad: function(x) {
+        return x*Math.PI/180;
+    },
+    fitBounds: function(markers)
+    {
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < markers.length; i++) {
+            bounds.extend(markers[i].getPosition());
+        }
+        this.map.googleElement.fitBounds(bounds);
     }
 };
