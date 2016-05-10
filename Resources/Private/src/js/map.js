@@ -7,6 +7,7 @@ var BwrkMarkerMap = {
                 lng: null
             },
             zoom: null,
+			scrollwheel: false,
             styles: [{
                 "featureType": "water",
                 "elementType": "geometry.fill",
