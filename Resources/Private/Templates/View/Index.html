@@ -16,6 +16,7 @@
     {
         <f:format.raw>{markersJs}</f:format.raw>
         var bwrkMarkerMap_{cObj.uid} = BwrkMarkerMap;
+						bwrkMarkerMap_{cObj.uid}.pageId = {pageId};
             bwrkMarkerMap_{cObj.uid}.map.id = 'tx-bwrk-markermap__{cObj.uid}';
             bwrkMarkerMap_{cObj.uid}.map.options.center.lat = {settings.map_center_lat};
             bwrkMarkerMap_{cObj.uid}.map.options.center.lng = {settings.map_center_lng};

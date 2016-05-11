@@ -43,6 +43,7 @@ class ViewController extends ActionController
         $this->view->assignMultiple(array(
             'markers' => $markers,
             'markersJs' => $this->buildMarkerJs($markers, $cObj),
+            'pageId' => $GLOBALS['TSFE']->id,
             'cObj' => $cObj
         ));
     }

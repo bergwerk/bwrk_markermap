@@ -83,6 +83,7 @@ var BwrkMarkerMap = {
         },
         googleElement: null
     },
+	pageId: null,
     geoCoder: null,
     distanceMatrix: null,
     geoCodeMarkers: [],
@@ -111,6 +112,7 @@ var BwrkMarkerMap = {
                     method: "GET",
                     url: "index.php",
                     data: {
+						'id' : that.pageId,
                         'eID': 'bwrkMarkerWindow',
                         'tx_bwrkmarkermap_pi2[uid]': tmpMarker.marker_id
                     }
@@ -144,6 +146,7 @@ var BwrkMarkerMap = {
                     var nearestMarker = new google.maps.Marker({
                         position: nearestMarkerObject.position
                     });
+
                     var locationMarker = new google.maps.Marker({
                         map: that.map.googleElement,
                         position: result.geometry.location,
